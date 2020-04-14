@@ -1,0 +1,326 @@
+.section-heading h2 {
+  font-size: 30px;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: center;
+}
+.layover {
+  background-color: rgba(51, 51, 51, 0.5);
+  width: 100%;
+  height: 100%;
+}
+p {
+  font-family: serif;
+}
+#poster {
+  background-color: #343a40;
+  background-image: url('../assets/images/bg/coffee-break.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+}
+#poster .layover {
+  background-color: rgba(51, 51, 51, 0.5);
+  width: 100%;
+  height: 100%;
+}
+#poster .poster-content {
+  position: relative;
+  top: 40%;
+  width: 50%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#poster .poster-content h1 {
+  color: #dfdad6;
+  font-size: 25px;
+  text-align: center;
+}
+#poster .poster-content p {
+  color: #dfdad6;
+  text-align: center;
+}
+#poster .poster-content .resume-download-block {
+  width: 150px;
+  height: 50px;
+  margin: 2px auto;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+#poster .poster-content .resume-download-block p {
+  position: relative;
+  top: 25%;
+  color: #343a40;
+  text-align: center;
+}
+#poster .poster-content a:hover {
+  text-decoration: none;
+}
+#poster .poster-content a:hover .resume-download-block {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#poster .poster-content a:hover .resume-download-block p {
+  font-size: 17px;
+}
+main #about-me {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  border: 1px solid #c58c2a;
+  margin-bottom: 20px;
+}
+main #about-me .about-profile {
+  display: flex;
+}
+main #about-me .about-profile .profile-img-container {
+  flex: 1;
+}
+main #about-me .about-profile .profile-bio-container {
+  flex: 1;
+}
+main #about-me .about-profile .profile-img {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+}
+main #about-me .about-profile .profile-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+main #about-me .about-profile .profile-bio {
+  font-family: serif;
+  margin: 10px 0;
+}
+main #about-me .about-profile .profile-bio p {
+  text-align: left;
+  font-size: 18px;
+}
+main #about-me .about-profile .profile-bio p span {
+  display: inline;
+}
+main #education {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  border: 1px solid #c58c2a;
+  margin-bottom: 20px;
+  border: unset;
+}
+main #education .institution-list .institution {
+  display: flex;
+}
+main #education .institution-list .institution #udacity {
+  background-image: url('../assets/images/bg/books.jpg');
+}
+main #education .institution-list .institution #pluralsight {
+  background-image: url('../assets/images/bg/library.jpg');
+}
+main #education .institution-list .institution .name-n-program {
+  flex: 1;
+  height: 250px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+main #education .institution-list .institution .name-n-program .layover {
+  border-radius: 5px;
+}
+main #education .institution-list .institution .name-n-program .institution-name {
+  padding: 20px 0 5px 0;
+}
+main #education .institution-list .institution .name-n-program .institution-name h3 {
+  width: fit-content;
+  padding: 5px 5px 7px 5px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+}
+main #education .institution-list .institution .name-n-program .institution-name h3 a {
+  color: #343a40;
+}
+main #education .institution-list .institution .name-n-program .institution-program {
+  padding-top: 15px;
+}
+main #education .institution-list .institution .name-n-program .institution-program p {
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+}
+main #education .institution-list .institution .details-n-status {
+  flex: 1.5;
+}
+main #education .institution-list .institution .details-n-status .program-details,
+main #education .institution-list .institution .details-n-status .program-status {
+  width: 90%;
+  margin: 10px auto;
+  background-color: #333;
+  border-radius: 5px;
+  color: #dfdad6;
+}
+main #education .institution-list .institution .details-n-status .program-details details {
+  padding: 5px;
+  font-family: serif;
+}
+main #education .institution-list .institution .details-n-status .program-status {
+  display: flex;
+}
+main #education .institution-list .institution .details-n-status .program-status p {
+  flex: 1px;
+  padding: 5px;
+  margin-top: 10px;
+  text-align: center;
+}
+main #education .institution-list hr {
+  background-color: #333;
+  height: 3px;
+  border-radius: 3px;
+}
+main #skills {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+  border: 1px solid #c58c2a;
+  margin-bottom: 20px;
+}
+main #skills .skill-list {
+  background-color: #333;
+}
+main #skills .skill-list .four-item-wrap {
+  display: flex;
+}
+main #skills .skill-list .four-item-wrap .two-item-wrap {
+  flex: 1;
+}
+main #skills .skill-list .two-item-wrap {
+  display: flex;
+}
+main #skills .skill-list .two-item-wrap .list-item {
+  flex: 1;
+}
+main #skills .skill-list .list-item {
+  border: 1px solid white;
+  height: 200px;
+}
+main #skills .skill-list .list-item img {
+  position: relative;
+  left: 45%;
+  top: 40%;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: white;
+}
+main #skills .skill-list .list-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+main #skills .skill-list .list-item:hover img {
+  width: 55px;
+}
+main #contact-me {
+  width: 100%;
+  height: fit-content;
+  padding: 10px 0;
+  background-color: #333;
+}
+main #contact-me .section-heading {
+  color: white;
+}
+main #contact-me .form {
+  width: 85%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+main #contact-me .form .input-block,
+main #contact-me .form .textarea-block {
+  margin: 10px 0;
+}
+main #contact-me .form .input-block input {
+  width: 100%;
+  height: 40px;
+  margin-left: -5px;
+  padding-left: 5px;
+  color: #333;
+}
+main #contact-me .form .textarea-block textarea {
+  width: 100%;
+  height: 250px;
+  margin-left: -5px;
+  padding-left: 5px;
+}
+footer {
+  background-color: #343a40;
+  height: 30vh;
+  color: #dfdad6;
+  padding-top: 10px;
+}
+footer .wrapper {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+footer .contact-details li {
+  list-style: none;
+}
+footer .account-details {
+  width: fit-content;
+  margin: 0 auto;
+}
+footer .account-details a {
+  text-decoration: none;
+}
+footer .account-details img {
+  width: fit-content;
+  margin: 5px;
+  background-color: white;
+  border-radius: 100%;
+}
+footer .account-details a:hover img {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+footer .signing-off {
+  margin-top: 10px;
+}
+footer .signing-off p {
+  text-align: center;
+}
+@media screen and (max-width: 992px) {
+  main #education .institution-list .institution {
+    display: flex;
+    flex-flow: column;
+  }
+  main #skills .skill-list .four-item-wrap {
+    display: flex;
+    flex-flow: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  #about-me .about-profile {
+    display: flex;
+    flex-flow: column;
+  }
+  #about-me .about-profile .profile-bio-container .profile-bio {
+    font-family: serif;
+  }
+  #about-me .about-profile .profile-bio-container .profile-bio p {
+    text-align: center;
+  }
+  #about-me .about-profile .profile-bio-container .profile-bio p span {
+    display: block;
+  }
+  #skills .skill-list .two-item-wrap {
+    display: flex;
+    flex-flow: column;
+    height: 40vh;
+  }
+  #skills .skill-list .two-item-wrap .list-item {
+    height: 100%;
+  }
+  #skills .skill-list .two-item-wrap .list-item img {
+    position: relative;
+    left: 42%;
+    top: 30%;
+  }
+}

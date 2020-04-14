@@ -1,0 +1,480 @@
+// Variables
+@smallDevice: 768px;
+@mediumDevice: 992px;
+@largeDevice: 1200px;
+
+@blue: #007bff;
+@dark: #343a40;
+@gray: #6c757d;
+@gray-dark: #343a40;
+@white: #dfdad6;
+
+@section-size:{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    border: 1px solid rgb(197, 140, 42);
+    margin-bottom: 20px;
+}
+// Variablese end
+ 
+// Global main syles
+.section-heading h2{
+    font-size: 30px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.layover{
+    background-color: rgba(51, 51, 51, 0.5);
+    width: 100%;
+    height: 100%;
+}
+
+p{
+    font-family: serif;
+}
+// Global main styles end
+
+// Poster
+#poster{
+    background-color: @dark;
+    background-image: url('../assets/images/bg/coffee-break.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+
+    .layover{
+        background-color: rgba(51, 51, 51, 0.5);
+        width: 100%;
+        height: 100%;
+    }
+
+    .poster-content{
+        position: relative;
+        top: 40%;
+        width: 50%;
+        max-width: 300px;
+        margin: 0 auto;
+        // border: 1px solid red;
+
+        h1{
+            color: @white;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        p{
+            color: @white;
+            text-align: center;
+        }
+
+        .resume-download-block{
+            width: 150px;
+            height: 50px;
+            margin: 2px auto;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+
+            p{
+                position: relative;
+                top: 25%;
+                color: @dark;
+                text-align: center;
+            }
+        }
+
+        a:hover{
+            text-decoration: none;
+
+            .resume-download-block{
+                background-color: rgba(255, 255, 255, 0.7);
+
+                p{
+                    font-size: 17px;
+                }
+            }
+        }
+        
+    }
+}
+// Poster end
+
+// ********************************** Main *******************************
+main{ 
+    // -------------------------About me section--------------------------
+    #about-me{
+        @section-size();
+
+        .about-profile{
+            // border: 1px solid blue;
+            display: flex;
+
+            .profile-img-container{
+                flex: 1;
+                // border: 1px solid purple;
+            }
+
+            .profile-bio-container{
+                flex: 1;
+                // border: 1px solid pink;
+            }
+
+            .profile-img{
+                width: 250px;
+                height: 250px;
+                margin: 0 auto;
+                // border: 1px solid orange;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                }
+            }
+
+            .profile-bio{
+                font-family: serif;
+                margin: 10px 0;
+
+                p{
+                    text-align: left;
+                    font-size: 18px;
+
+                    span{
+                        display: inline;
+                    }
+                }
+            }
+        }
+    }
+    // About me section end
+
+    // ------------------------------------------------------------------
+
+    // -------------------------- Education section ---------------------
+    #education{
+        @section-size();
+        border: unset;
+
+        .institution-list{
+            .institution{
+                display: flex;
+
+                #udacity{
+                    background-image: url('../assets/images/bg/books.jpg');
+                }
+
+                #pluralsight{
+                    background-image: url('../assets/images/bg/library.jpg');
+                }
+                
+                .name-n-program{
+                    flex: 1;
+                    height: 250px;
+                    // background-image: url('../assets/images/bg/books.jpg');
+                    background-position: center;
+                    background-size: cover;
+                    border-radius: 5px;
+
+                    .layover{
+                        border-radius: 5px;
+                    }
+
+                    .institution-name{
+                        padding: 20px 0 5px 0;
+                        // border: 1px solid orange;
+
+                        h3{
+                            width: fit-content;
+                            padding: 5px 5px 7px 5px;
+                            margin: 0 auto;
+                            background-color: rgba(255, 255, 255, 0.6);
+                            border-radius: 10px;
+
+                            a{
+                                color: @gray-dark;
+                            }
+                        }
+                    }
+
+                    .institution-program{
+                        padding-top: 15px;
+
+                        p{
+                            text-align: center;
+                            color: white;
+                            text-transform: uppercase;
+                            font-size: 18px;
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                .details-n-status{
+                    flex: 1.5;
+
+                    .program-details, .program-status{
+                        width: 90%;
+                        margin: 10px auto;
+                        background-color: #333;
+                        border-radius: 5px;
+                        color: @white;
+                    }
+
+                    .program-details{
+                        details{
+                            padding: 5px;
+                            font-family: serif;                            
+                        }
+                    }
+
+                    .program-status{
+                        display: flex;
+                        p{
+                            flex: 1px;
+                            padding: 5px;
+                            margin-top: 10px;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            hr{
+                background-color: #333;
+                height: 3px;
+                border-radius: 3px;
+            }
+        }  
+    }
+    // ----------------------- Education section end --------------------
+
+    // -------------------------- Skills section ------------------------
+    #skills{
+        @section-size();
+
+        .skill-list{
+            background-color: #333;
+
+            .four-item-wrap{
+                display: flex;
+
+                .two-item-wrap{
+                    flex: 1;
+                }
+            }
+
+            .two-item-wrap{
+                display: flex;
+
+                .list-item{
+                    flex: 1;
+                }
+            }
+
+            .list-item{
+                border: 1px solid white;
+                height: 200px;
+
+                img{
+                    position: relative;
+                    left: 45%;
+                    top: 40%;
+                    margin: 0 auto;
+                    // border: 1px solid green;
+                    border-radius: 5px;
+                    background-color: white;
+                }
+            }
+
+            .list-item:hover{
+                background-color: rgba(255, 255, 255, 0.1);
+
+                img{
+                    width: 55px;
+                }
+            }
+        }
+    }
+    // ----------------------- Skills section end --------------------------
+
+    // ------------------------------------------------------------------
+
+    // ----------------------- Contact me section --------------------------
+    #contact-me{
+        width: 100%;
+        height: fit-content;
+        padding: 10px 0;
+        background-color: #333;
+
+        .section-heading{
+            color: white;
+        }
+
+        .form{
+            width: 85%;
+            max-width: 800px;
+            margin: 0 auto;
+
+            .input-block, .textarea-block{
+                margin: 10px 0; 
+            }
+
+            .input-block{
+                // border: 1px solid green;
+
+                input{
+                    width: 100%;
+                    height: 40px;
+                    margin-left: -5px;
+                    padding-left: 5px;
+                    color: #333;
+                }
+            }
+
+            .textarea-block{
+                // border: 1px solid green;
+
+                textarea{
+                    width: 100%;
+                    height: 250px;
+                    margin-left: -5px;
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+    // Contact section end 
+}
+// Main end
+
+// Footer
+footer{
+    // background-color: #343a40;
+    background-color: @dark;
+    height: 30vh;
+    color: @white;
+    padding-top: 10px;
+
+    .wrapper{
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .contact-details{
+        li{
+            list-style: none;
+        }
+    }
+
+    .account-details{
+        // border: 1px solid green;
+        width: fit-content;
+        margin: 0 auto;
+        
+        a{
+            text-decoration: none;
+        }
+
+        img{
+            width: fit-content;
+            margin: 5px;
+            background-color: white;
+            border-radius: 100%;
+        }
+
+        a:hover{
+            img{
+                background-color: rgba(255, 255, 255, 0.5);
+            }
+        }
+    }
+
+    .signing-off{
+        margin-top: 10px;
+         p{
+            text-align: center;
+        }
+    }
+}
+// Footer end
+
+@media screen and (max-width: @mediumDevice){
+    main{
+        // ------------------------- Education section ----------------------
+        #education .institution-list .institution{
+                display: flex;
+                flex-flow: column;
+            }
+        
+        // ----------------------- Education section end --------------------
+
+
+        // ------------------------ Skills section --------------------------
+        #skills{
+
+            .skill-list{
+                .four-item-wrap{
+                    display: flex;
+                    flex-flow: column; 
+                }            
+            }
+        }
+        // ----------------------- Skills section end ------------------------
+    }    
+}
+
+@media screen and (max-width: @smallDevice){
+    // ----------------------- About Me section ---------------------------
+    #about-me{
+
+        .about-profile{
+            display: flex;
+            flex-flow: column;
+
+            .profile-bio-container{
+                
+                .profile-bio{
+                    font-family: serif;
+
+                    p{
+                        text-align: center; 
+                        
+                        span{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // ---------------------- About Me section end -----------------------
+
+    // -------------------------------------------------------------------
+
+    // -------------------------- Skills section -------------------------
+    #skills{
+        .skill-list{
+            .two-item-wrap{
+                display: flex;
+                flex-flow: column;
+                height: 40vh;
+
+                .list-item{
+                    height: 100%;
+                    img{
+                        position: relative;
+                        left: 42%;
+                        top: 30%;
+                    }
+                }
+
+            }
+        }
+    }
+    // ------------------------ Skills section end -----------------------
+}
