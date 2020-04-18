@@ -13,10 +13,10 @@
     width: 90%;
     max-width: 1000px;
     margin: 20px auto;
-    border: 1px solid rgb(197, 140, 42);
+    // border: 1px solid rgb(197, 140, 42);
     margin-bottom: 20px;
 }
-// Variablese end
+// Variables end
  
 // Global main syles
 .section-heading h2{
@@ -173,7 +173,7 @@ main{
                 
                 .name-n-program{
                     flex: 1;
-                    height: 250px;
+                    height: 270px;
                     // background-image: url('../assets/images/bg/books.jpg');
                     background-position: center;
                     background-size: cover;
@@ -184,14 +184,14 @@ main{
                     }
 
                     .institution-name{
-                        padding: 20px 0 5px 0;
+                        padding: 25px 0 5px 0;
                         // border: 1px solid orange;
 
                         h3{
                             width: fit-content;
-                            padding: 5px 5px 7px 5px;
+                            padding: 6px 5px 8px 5px;
                             margin: 0 auto;
-                            background-color: rgba(255, 255, 255, 0.6);
+                            background-color: rgba(255, 255, 255, 0.7);
                             border-radius: 10px;
 
                             a{
@@ -207,8 +207,8 @@ main{
                             text-align: center;
                             color: white;
                             text-transform: uppercase;
-                            font-size: 18px;
-                            font-weight: 500;
+                            font-size: 1.8rem;
+                            font-weight: 600;
                         }
                     }
                 }
@@ -219,9 +219,10 @@ main{
                     .program-details, .program-status{
                         width: 90%;
                         margin: 10px auto;
-                        background-color: #333;
+                        background-color: @gray-dark;
                         border-radius: 5px;
-                        color: @white;
+                        // color: @white;
+                        color: white;
                     }
 
                     .program-details{
@@ -244,7 +245,7 @@ main{
             }
 
             hr{
-                background-color: #333;
+                background-color: @gray-dark;
                 height: 3px;
                 border-radius: 3px;
             }
@@ -257,7 +258,8 @@ main{
         @section-size();
 
         .skill-list{
-            background-color: #333;
+            // background-color: #4f5050;
+            background-color: @gray-dark;
 
             .four-item-wrap{
                 display: flex;
@@ -301,14 +303,98 @@ main{
     }
     // ----------------------- Skills section end --------------------------
 
-    // ------------------------------------------------------------------
+    // ------------------------- Portfolio section ----------------------
+    #portfolio{
+        @section-size();
+        .project{
+           
+            .project-img{
+                width: 100%;
+                height: 70vh;
+                background-image: url('../assets/images/bg/productive.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+
+            .project-info{
+                .project-link{
+                    color: @dark;
+
+                    .link-container{
+                        width: 150px;
+                        height: 50px;
+                        margin: 0 auto;
+                        background-color: rgba(255, 255, 255, 0.5);
+                        border-radius: 15px;
+
+                        p{
+                            padding-top: 10px;
+                            font-size: 20px;
+                        }
+                    }
+
+                    &:hover, &:active, &:visited{
+                        .link-container{
+                            background-color: rgba(255, 255, 255, 0.7);
+
+                            p{
+                                font-size: 21px;
+                            }
+                        }
+                    }
+                }
+
+                .info-technologies{
+                    margin-top: 10px;
+                    // background-color: rgba(255, 255, 255, 0.5);
+
+                    a{
+                        text-decoration: none;
+
+                        img{
+                            width: 45px;
+                            background-color: white;
+                            border-radius: 100%;
+                            padding: 4px;
+                            margin: 5px;
+                        }
+
+                        &:hover, &:active, &:visited{
+                            img{
+                                background-color: rgba(255, 255, 255, 0.5);
+                                width: 46px;
+                            }
+                        }
+                    }
+                }
+
+                .info-description{
+                    margin-top: 10px;
+                    background-color: rgba(255, 255, 255, 0.7);
+                    border-radius: 5px;
+
+                    h4{
+                        color: @dark;
+                        text-decoration: underline;
+                    }
+
+                    p{
+                        color: @dark;
+                        font-size: 1rem;
+                        padding: 2px;
+                    }
+                }
+            }
+        }
+    }
+    // ------------------------Portfolio section end --------------------
 
     // ----------------------- Contact me section --------------------------
     #contact-me{
         width: 100%;
         height: fit-content;
         padding: 10px 0;
-        background-color: #333;
+        background-color: @dark;
 
         .section-heading{
             color: white;
@@ -354,7 +440,7 @@ main{
 // Footer
 footer{
     // background-color: #343a40;
-    background-color: @dark;
+    background-color: #30353a;
     height: 30vh;
     color: @white;
     padding-top: 10px;
@@ -468,7 +554,7 @@ footer{
                     height: 100%;
                     img{
                         position: relative;
-                        left: 42%;
+                        left: 44%;
                         top: 30%;
                     }
                 }
