@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta 
+        name="description"
+        content="Matthew Rungwe's portfolio website, a platform to showcase 
+                 the web development skills and projects acquired over the 
+                 period of study.">
+                 
     <title>Matthew Rungwe: Portfolio site</title>
 
     <!-- Vendor styles -->
@@ -126,39 +132,39 @@
                         <div class="program-details">
                             <details>
                                 <summary>
-                                    This program served a s Fundamentals course and as an
-                                    introduction to Web Development. All core concepts were
-                                    covered: HTML, CSS and JavaScript. Advanced concepts came
-                                    on as incremental knowledge and projects as practice. Other details...
-                                </summary>
-                
+                                    This is a Google coined program. Focuses on the best practices 
+                                    to designing and developing web applications that are responsive 
+                                    and accessible. It goes further into ways of optimising and  
+                                    improving the overall perfomance of our web applications. Other details...
+                                </summary>                
                                 <ul>
                                     <li>
-                                        Building HTML elements, creating responsive webpages and
-                                        interacting with DOM objects using JavaScript.
+                                        Responsive Web design: concepts that improve the performmance
+                                        of webpages on small devices. Allows users on small devices 
+                                        to have the same experience as users on bigger devices.
                                     </li>
                                     <li>
-                                        Identifying problems and debugging them using
-                                        browser developer tools.
+                                        Mobile Networks: detailed dive into using fetch() to attain 
+                                        resources. Multiple ways of validating reponses, handling 
+                                        successful responses and catching errors.
                                     </li>
                                     <li>
-                                        In depth JavaScript: intro to Object-Oriented
-                                        Javascript and ES6. Using JavaScript library: jQuery,
-                                        and connecting to external API's.
+                                        Accessibility: Deeper overview of how to use ARIA to make
+                                        webpage elements meaningful to assisstive technology. Semantics
+                                        is discussed as a close alternative to ARIA and developing meaningful
+                                        and flowing webpages.
                                     </li>
                                     <li>
-                                        Handling asynchronous operations, AJAX call and handling
-                                        promises.
+                                        Progressive Web Apps: Introduction to service workers, active scripts 
+                                        on the website that improve the behaviour and minimise page load and 
+                                        isolating the application shell.
                                     </li>
                                     <li>
-                                        Version Control &amp; GitHub. Creating a Git repository
-                                        from scratch, cloning existing repositories, reviewing Git
-                                        repository history and generating commits.
+                                        
                                     </li>
                                     <li>
-                                        Deep dive into jQuery and learning how to interact with real
-                                        world projects. Using jQuery to listen to events and change
-                                        the web pages dynamically.
+                                        Exposure to HTML, CSS, JavaScript and Angular IQ tests. Recommended 
+                                        practice and advanced concepts.  
                                     </li>
                                 </ul>
                             </details>
@@ -446,5 +452,20 @@
 
         </div>
     </footer>
+
+    <script>
+            // Script to register the service worker goes here
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('service-worker.js')
+                        .then(registration => {
+                            console.log('Service Worker is registered', registration);
+                        })
+                        .catch(err => {
+                            console.error('Registration failed:', err);
+                        });
+                });
+            }
+    </script>
 </body>
 </html>
