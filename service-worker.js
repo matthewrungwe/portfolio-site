@@ -2,14 +2,14 @@ const filesToCache = [
     '/',
     './css/main.css',
     './assets/vendor/bootstrap/css/bootstrap.css',
-    './assets/images/bg/coffee-break.jpg',
-    './assets/images/profile/profile-img.png',
+    // './assets/images/bg/coffee-break.jpg',
+    // './assets/images/profile/profile-img.png',
     './index.html',
     './assets/resume/Resume Evol.pdf',
     './assets/resume/Resume Evol.docx'
 ];
 
-const staticCacheName = 'pages-cache-v1';
+const staticCacheName = 'pages-cache-v2';
 
 self.addEventListener('install', event => {
     console.log('Attempting to install service worker and cache static assets');
@@ -18,6 +18,30 @@ self.addEventListener('install', event => {
             .then(cache => {
                 return cache.addAll(filesToCache);
             })
+    );
+});
+
+
+// The activate event
+// -> Using the activate event to get rid of unused caches in the service worker
+// -> These unused caches can be outdated resources that need to be removed to conserve
+// space on users' devices. activate event ensure we aren't deleting caches before the 
+// new service has taken over the page
+self.addEventListener('activate', event => {
+    console.log('Activating new service worker...');
+
+    const cacheWhitelist = [staticCacheName];
+
+    event.waitUntil(
+        caches.keys().then(cacheNames => {
+            return Promise.all(
+                cacheNames.map(cacheName => {
+                    if (cacheWhitelist.indexOf(cacheName) === -1) {
+                        return caches.delete(cacheName);
+                    }
+                })
+            );
+        })
     );
 });
 
